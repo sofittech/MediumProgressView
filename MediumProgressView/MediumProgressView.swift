@@ -49,7 +49,7 @@ open class MediumProgressView: UIView {
         animation.fromValue = isLeftToRight ? -frame.size.width : frame.size.width * 2
         animation.toValue = isLeftToRight ? frame.size.width * 2 : -frame.size.width
         animation.duration = duration
-        animation.fillMode = kCAFillModeBoth
+        animation.fillMode = CAMediaTimingFillMode.both
         animation.isRemovedOnCompletion = false
         animation.repeatCount = repeatCount
         layer.add(animation, forKey: "progressAnimation")

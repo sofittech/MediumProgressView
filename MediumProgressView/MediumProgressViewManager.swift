@@ -26,7 +26,7 @@ open class MediumProgressViewManager {
     
     public init() {}
 
-    open static let sharedInstance = MediumProgressViewManager()
+    public static let sharedInstance = MediumProgressViewManager()
 
     // MARK: function
     
