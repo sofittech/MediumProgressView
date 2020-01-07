@@ -16,6 +16,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         progressViewManager = MediumProgressViewManager.sharedInstance
+        progressViewManager!.position = .custom(x: 0, y: 85)
         progressViewManager?.show()
     }
     

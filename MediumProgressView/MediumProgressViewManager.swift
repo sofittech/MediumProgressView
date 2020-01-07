@@ -14,6 +14,7 @@ open class MediumProgressViewManager {
     public enum Position {
         case top
         case bottom
+        case custom(x:CGFloat, y: CGFloat)
     }
     
     open var position: Position = .top
@@ -55,6 +56,8 @@ open class MediumProgressViewManager {
                 newFrame = CGRect(x: 0, y: 0, width: newWidth, height: height)
             case .bottom:
                 newFrame = CGRect(x: 0, y: newHeight - height, width: newWidth, height: height)
+        case .custom(let x, let y):
+                newFrame = CGRect(x: x, y: y, width: newWidth, height: height)
         }
 
         let progressView = MediumProgressView(
